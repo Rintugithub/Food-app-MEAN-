@@ -15,7 +15,7 @@ const routes: Routes = [
   {path:'search/:searchTerm',component:HomeComponent},
   {path:'tag/:tag',component:HomeComponent},
   {path:'food/:id',component:FoodPageComponent},
-  {path:'cart-page',component:CartPageComponent},
+  {path:'cart-page',component:CartPageComponent,canActivate:[AuthGuard]},
   {path:'login',component:LoginPageComponent},
   {path:'register',component:RegisterPageComponent},
   {path:'checkout',component:CheckoutPageComponent, canActivate:[AuthGuard]},
